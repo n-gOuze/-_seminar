@@ -35,6 +35,7 @@ else
     Console.WriteLine("Уупс, в нашем измерении нет такого дня недели ");
 }
 
+//int day = Convert.ToInt32(Console.ReadLine());
 //else if (day == 2)
 //{
     //
