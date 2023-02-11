@@ -14,3 +14,4 @@ else
   Console.WriteLine("Нет ");
 }
 
+//int numberA = Convert.ToInt32(Console.ReadLine());
