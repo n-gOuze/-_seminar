@@ -4,6 +4,10 @@ if(number == 6 || number == 7)
 {
     Console.WriteLine("да ");
 }
+else if(number < 1 || number > 7)
+{
+    Console.WriteLine("число не является днем недели ");
+}
 else
 {
     Console.WriteLine("нет ");
