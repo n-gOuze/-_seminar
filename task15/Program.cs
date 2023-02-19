@@ -7,10 +7,11 @@ if(number < 100)
 }
 else
 {
-    while(number > 999)
+    int count = number;
+    while (count > 999)
     {
-        int count = number / 10;
+        count = count / 10;
     }
-    int result = number % 10;
+    int result = count % 10;
     Console.WriteLine(result);
 }
