@@ -17,6 +17,6 @@ else
 }
 // else(
 //     for(; number > 999;){
-//         number = number / 10
+//         number = number / 10;
 //     }
 // )
