@@ -15,3 +15,8 @@ else
     int result = count % 10;
     Console.WriteLine(result);
 }
+// else(
+//     for(; number > 999;){
+//         number = number / 10
+//     }
+// )
