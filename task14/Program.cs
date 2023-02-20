@@ -10,3 +10,7 @@ else
 {
     Console.WriteLine("error");
 }
+
+// number = Math.Abs(number);
+// int middle = (number / 10) % 10;
+// Console.WriteLine(middle);
