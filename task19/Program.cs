@@ -1,13 +1,10 @@
 ﻿Console.WriteLine("Введите координату x первой точки");
-int xa = Convert.ToInt32(Console.ReadLine());
+double xa = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите координату y первой точки");
-int ya = Convert.ToInt32(Console.ReadLine());
+double ya = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите координату x второй точки");
-int xb = Convert.ToInt32(Console.ReadLine());
+double xb = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите координату y второй точки");
-int yb = Convert.ToInt32(Console.ReadLine());
-double c = Math.Pow(xb - xa, 2);
-double d = Math.Pow(yb - ya, 2);
-double sum = c + d;
-double res = Math.Sqrt(sum);
+double yb = Convert.ToDouble(Console.ReadLine());
+double res = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));
 Console.WriteLine(res);
