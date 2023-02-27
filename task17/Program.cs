@@ -1,7 +1,18 @@
-﻿Console.WriteLine("Введите координаты точки по X");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты точки по Y");
-int y = Convert.ToInt32(Console.ReadLine());
+﻿// Console.WriteLine("Введите координаты точки по X");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+int ReadNumber(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int x = ReadNumber("Введите координаты точки по X");
+int y = ReadNumber("Введите координаты точки по Y");
+
+// Console.WriteLine("Введите координаты точки по Y");
+// int y = Convert.ToInt32(Console.ReadLine());
+
 if(x > 0 && y > 0)
 {
     Console.WriteLine("Точка находится в первой координатной четверти");
