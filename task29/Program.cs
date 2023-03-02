@@ -7,16 +7,17 @@ int ReadNumber(string messageToUser)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int CountOfDigits(int number)
+int SumOfDigits(int number)
 {
-    int count;
-    for(count = 0; number !=0; count++)
+    int result = 0;
+    while (number > 0)
     {
-        number /= 10; //number = number / 10
+        result = result + number % 10;
+        number = number / 10;
     }
-    return count;
+    return result;
 }
 
-int usernumber = ReadNumber("Введите число");
-int result = CountOfDigits(usernumber);
+int number = ReadNumber("Введите число");
+int result = SumOfDigits(number);
 Console.WriteLine(result);
