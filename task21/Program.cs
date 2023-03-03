@@ -8,7 +8,7 @@ if(number < 999 || number > 100000)
 {
     Console.WriteLine("Error");
 }
-else if(firstDigit == lastDigit || secondDigit == fourthDigit)
+else if(firstDigit == lastDigit && secondDigit == fourthDigit)
 {
     Console.WriteLine("Число является полиндромом");
 }
