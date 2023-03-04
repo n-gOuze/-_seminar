@@ -21,17 +21,17 @@ int QuantityOfElements (int[] array)
     {
         while (array[i] >= 10 && array[i] <= 99)
         {
-            result = i++;
+            result++;
         }
     }
-return result;
+    return result;
 }
 
 
-int[] array = new int[123];
+int[] array = new int[5];
 NewArray(array);
 Console.WriteLine($"[{string.Join(", ", array)}]");
 
-int res = QuantityOfElements(result);
+int res = QuantityOfElements(array);
 Console.WriteLine(res);
 
