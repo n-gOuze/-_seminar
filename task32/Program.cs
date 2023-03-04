@@ -9,6 +9,7 @@ int[] GetArray(int[] array)
     {
         array[i] = new Random().Next(-10, 11);
     }
+return array;
 }
 
 void ReplaceArray(int[] array)
