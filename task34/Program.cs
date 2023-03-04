@@ -19,7 +19,7 @@ int QuantityOfElements (int[] array)
     int result = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        while (array[i] >= 10 && array[i] <= 99)
+        if (array[i] >= 10 && array[i] <= 99)
         {
             result++;
         }
