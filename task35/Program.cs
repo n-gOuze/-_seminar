@@ -3,15 +3,41 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-void NewArray(int[] array)
+void FillArray(int[] newArray)
 {
-    int length = array.Length;
-    for (int i = 0; i < array.Length; i++)
+    int length = newArray.Length;
+    for (int i = 0; i < newArray.Length; i++)
     {
-        array[i] = new Random().Next(0, 100);
+        newArray[i] = new Random().Next(0, 10);
     }
 }
 
-int[] array = new int[length];
-NewArray(array);
-Console.WriteLine($"[{string.Join(", ", array)}]");
+int[] LengthArray(int[] array)
+{
+    if(array.Length % 2 == 0)
+    {
+        return new int[array.Length / 2];
+    }
+    else
+    {
+        return new int[array.Length / 2 + 1];
+    }
+}
+
+int[] MultiplyArray(int[] array)
+{
+    int[] result = LengthArray(array);
+    for (int i = 0; i < array.Length / 2; i++)
+    {
+        result[i] = array[i] * array[array.Length - i - 1];
+    }
+    if (array.Length % 2 != 0)
+    {
+        result[result.Length - 1] = array[array.Length / 2];
+    }
+    return result;
+}
+
+int[] newArray = new int[5];
+FillArray(newArray);
+Console.WriteLine($"{string.Join(',', newArray)} -> {string.Join(',', MultiplyArray(newArray))}");
