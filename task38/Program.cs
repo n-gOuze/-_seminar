@@ -15,14 +15,14 @@ int MaxMinNum(int[] array)
 {
     int Max = array[0];
     int Min = array[0];
-    int sum = 0;
+    int dif = 0;
     for(int i = 0; i < array.Length; i++)
     {
         if(array[i] > Max) Max = array[i];
         else if(array[i] < Min) Min = array[i];
-        sum = Max + Min;
+        dif = Max - Min;
     }
-    return sum;
+    return dif;
 }
 
 int[] array = new int[5];
