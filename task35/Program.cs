@@ -31,7 +31,7 @@ int[] MultiplyArray(int[] array)
     {
         result[i] = array[i] * array[array.Length - i - 1];
     }
-    if (array.Length % 2 != 0)
+    if (array.Length % 2 != 0) //не равен нулю
     {
         result[result.Length - 1] = array[array.Length / 2];
     }
