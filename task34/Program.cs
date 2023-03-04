@@ -10,16 +10,16 @@ void NewArray(int[] array)
     int length = array.Length;
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(0, 1000);
+        array[i] = new Random().Next(0, 150);
     }
 }
 
-int SumOfNumbers (int [] array)
+int QuantityOfElements (int[] array)
 {
     int result = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        while (array[i] >= array[10] && array[i] <= array[99])
+        while (array[i] >= 10 && array[i] <= 99)
         {
             result = i++;
         }
@@ -32,6 +32,6 @@ int[] array = new int[123];
 NewArray(array);
 Console.WriteLine($"[{string.Join(", ", array)}]");
 
-int res = SumOfNumbers(result);
+int res = QuantityOfElements(result);
 Console.WriteLine(res);
 
