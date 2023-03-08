@@ -22,11 +22,13 @@ int[] myArray1 = GetRandomArray(LENGTH, LEFBORDER, RIGHTBORDER);
 // int[] myArray2 = myArray1; //при таком коде мы не создали копию массива, а просто поместили ссылку
 
 int[] myArray2 = new int[myArray1.Length];
-for(int i = 0; i < myArray2.Length; i++)
-{
-    myArray2[i] = myArray1[i];
-}
+// for(int i = 0; i < myArray2.Length; i++)
+// {
+//     myArray2[i] = myArray1[i];
+// }
 
-myArray1[0] = -100000;
+// myArray1[0] = -100000;
+Array.Copy(myArray1, myArray2, myArray1.Length);
+// Array.Copy(myArray1, myArray2, 3); // 3 - копирует  первые 3 элемента
 Console.WriteLine(string.Join(", ", myArray1));
 Console.WriteLine(string.Join(", ", myArray2));
