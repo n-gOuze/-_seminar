@@ -4,7 +4,7 @@
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6;
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3,0.
 
 void CreateMatrix(int[,] matrix)
 {
@@ -29,23 +29,22 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int Average (int[,] matrix)
+double Average (int[,] matrix)
 {
-    int sum = 0;
-    int i = 0;
-    int count = 1;
-    int avg = 0;
-    for(int j = 0; j < matrix.GetLength(1); j++)
+    double sum = 0;
+    int j = 0;
+    int count = 0;
+    for(int i = 0; i < matrix.GetLength(0); i++)
     {
         sum = sum + matrix[i, j];
         count++;
     }
-    avg = sum / count;
-    return avg; 
+    double avg = sum / count;
+    return avg;
 }
 
-int[,] matrix = new int[4, 5];
+int[,] matrix = new int[3, 4];
 CreateMatrix(matrix);
 PrintMatrix(matrix);
-int result = Average(matrix);
+double result = Average(matrix);
 Console.WriteLine(result);
