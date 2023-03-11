@@ -37,7 +37,7 @@ void SwipeBorderLines(int[,] matrix)
 {
     for(int i = 0; i < matrix.GetLength(1); i++)
     {
-        temp = matrix(0, i);
+        int temp = matrix[0, i];
         matrix[0, i] = matrix[matrix.GetLength(0) - 1, i];
         matrix[matrix.GetLength(0) - 1, i] = temp;
     }
@@ -46,4 +46,7 @@ void SwipeBorderLines(int[,] matrix)
 int m = ReadNumber("Введите количество строк");
 int n = ReadNumber("Введите количество столбцов");
 int[,] myMatrix = GetRandomMatrix(m, n);
+PrintMatrix(myMatrix);
+SwipeBorderLines(myMatrix);
+Console.WriteLine();
 PrintMatrix(myMatrix);
