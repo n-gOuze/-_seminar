@@ -29,22 +29,24 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-double Average (int[,] matrix)
+void Average (int[,] matrix)
 {
-    double sum = 0;
-    int j = 0;
-    int count = 0;
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    double avg = 0;
+    for(int j = 0; j < matrix.GetLength(1); j++)
     {
-        sum = sum + matrix[i, j];
-        count++;
+        double sum = 0;
+        int count = 0;
+        for(int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum = sum + matrix[i, j];
+            count++;
+        }
+        avg = sum / count;
+        Console.WriteLine($"{avg:f1}");
     }
-    double avg = sum / count;
-    return avg;
 }
 
 int[,] matrix = new int[3, 4];
 CreateMatrix(matrix);
 PrintMatrix(matrix);
-double result = Average(matrix);
-Console.WriteLine(result);
+Average(matrix);
