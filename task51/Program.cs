@@ -34,22 +34,29 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int CheckNumber (int[,] matrix)
+void CheckNumber (int[,] matrix)
 {
     int res = 0;
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    if (m < matrix.GetLength(0) && n < matrix.GetLength(1))
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
+        for(int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for(int j = 0; j < matrix.GetLength(1); j++)
             {
                 res = matrix[m, n];
             }
+        }
+        Console.WriteLine($"{res}");    
     }
-    return res;
+
+    else
+    {
+        Console.WriteLine("Значение не найдено");
+    }
 }
 
 int[,] matrix = new int[4, 5];
 CreateMatrix(matrix);
 PrintMatrix(matrix);
-int result = CheckNumber(matrix);
-Console.WriteLine(result);
+CheckNumber(matrix);
 
