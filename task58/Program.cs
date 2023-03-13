@@ -32,22 +32,41 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+// void SumOfElements (int[,] matrix)
+// {
+//     int number = 0;
+//     for(int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         int sum = 0;
+//         for(int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             sum = sum + matrix[i, j];
+//         }
+//         number = sum;
+//         Console.WriteLine($"{number}");
+//     }
+// }
+
 void SumOfElements (int[,] matrix)
 {
-    int number = 0;
+    int[] count = new int[matrix.GetLength(0)];
     for(int i = 0; i < matrix.GetLength(0); i++)
     {
         int sum = 0;
+        int index = i;
         for(int j = 0; j < matrix.GetLength(1); j++)
         {
             sum = sum + matrix[i, j];
         }
-        number = sum;
-        Console.WriteLine($"{number}");
+        count[index] = sum;
+        Console.WriteLine($"{sum}");
     }
+    if(count[0] < count[1]) Console.WriteLine("1 строка");
+    else Console.WriteLine("нет");
 }
 
 int[,] matrix = new int[3, 4];
 CreateMatrix(matrix);
 PrintMatrix(matrix);
 SumOfElements(matrix);
+
