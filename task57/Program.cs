@@ -26,16 +26,21 @@ void PrintMatrix (int[,] matrix)
 
 void MinMaxMatrix (int[,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(0) - 1; i++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        if(matrix[i, j] < matrix[i + 1, j + 1])
+        while (matrix[i, j + 1] < matrix.GetLength(1) - 1)
         {
-            int temp = matrix[i, j];
-            matrix[i, j] = matrix[i + 1, j + 1];
-            matrix[i + 1, j + 1] = temp;            
-        }           
-    }
-}
+            if (matrix[i, j + 1] < matrix[i, j])
+        {
+                int temp = matrix[i, j + 1];
+                matrix[i, j + 1] = matrix[i, j];
+                matrix[i, j]  = temp;                    
+        }
+        }
+    }          
+}           
+
+
 
 int[,] matrix = new int[3, 4];
 FillMatrix(matrix);
