@@ -1,5 +1,5 @@
 ﻿// Задача 54: Задайте двумерный массив. 
-// Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+// Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива.
 
 void FillMatrix (int[,] matrix)
 {
@@ -31,17 +31,16 @@ void MinMaxMatrix (int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             int min = matrix[i, j];
-            if (matrix[i, matrix.GetLength(1) - 1] < min)
-        {
-                int temp = matrix[i, 0];
-                matrix[i, 0] = matrix[i, matrix.GetLength(1) - 1];
-                matrix[i, matrix.GetLength(1) - 1] = temp;                  
-        }          
-        }
-    }  
-}         
-
-
+            for( int count = 0; count < matrix.GetLength(1); count++)
+            {
+                if (matrix[i, count] < min) min = matrix[i, count];
+                int temp = matrix[i, count];
+                matrix[i, count] = min;
+                min = temp;  
+            }         
+        }      
+    }
+}          
 
 int[,] matrix = new int[4, 4];
 FillMatrix(matrix);
